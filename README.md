@@ -4,7 +4,7 @@ Since some robotic arms, like the UR5 do not provide a communication connection 
 
 The device is designed for the use of a UR5 with a Robotiq gripper and/or FT sensor but it can easily be altered for other arms and grippers.
 
-![installed device](docs/installed_device.jpg)
+![installed device](docs/installed_device.png)
 
 The installed device between the gripper and the FT sensor.
 
@@ -46,7 +46,7 @@ The HC-05 should now be programmed. Reconnect it to the power without holding th
 The case should be printed with enough infill (>=30%), since it has to be strong enough. We used ABS as material which worked very well but you can also try PLA if you want.
 When assembling, first put all electronics inside. The planned positions of the chips are shown below. Then put the lid on it and use the vertical screws to connect the device to the FT sensor. Afterwards, put the gripper on top of it and use the horizontal screws to fix it.
 
-![assembyl](docs/open_device.jpg)
+![assembyl](docs/open_device.png)
 
 ## Seriel Connection
 
