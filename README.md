@@ -1,4 +1,4 @@
-# Serielle Bluetooth Connection for Robotique Gripper and FT Sensor
+# Serial Bluetooth Connection for Robotique Gripper and FT Sensor
 
 Since some robotic arms, like the UR5 do not provide a communication connection inside, it is necessary to lay the cables for connected grippers or sensors on the outside of the arm. This leads to entanglement and to unintented contact with other objects. We created a device which can be installed at the end of the arm and which provides multiple bluetooth connections, thus making the cables unnecessary.
 
@@ -48,7 +48,7 @@ When assembling, first put all electronics inside. The planned positions of the 
 
 ![assembyl](docs/open_device.png)
 
-## Seriel Connection
+## Serial Connection
 
 With Linux it is possible to establish a serial connection via Bluetooth using **rfcomm**. First pair and trust the HC-05 with your computer (you can use blueman-manager if you want). Then bind the HC-05 to seriel devices using **rfcomm bind /dev/rfcomm1 BTADRESS**, where BTADRESS is your bluetooth adress which you noted during programming of the HC-05. You can also see it in the blueman-manager.
 Do the same for the second HC-05 to /dev/rfcomm2 and remember which rfcomm is connected to which device.
