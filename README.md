@@ -58,6 +58,7 @@ Flash the [**test sketch**](code/test.arduino) on the teensy to test the connect
 
 ## Troubleshooting
 
-First make sure that the Bluetooth adapter of the computer is as near as possible to the robotic arm and that it is not obstructed by anything.
-If the bluetooth connection stops to work, try **rfcomm release all** and rebinding of the devices.
-If you have any further errors (or problem solutions), please write issues or edit this file directly.
+- First make sure that the Bluetooth adapter of the computer is as near as possible to the robotic arm and that it is not obstructed by anything.
+- If the bluetooth connection stops to work, try **rfcomm release all** and rebinding of the devices.
+- If you update your system to ubuntu 18.04, the default version of pymodbus install from `apt-get` does not work, use `pip install pymodbus==1.2.0` to downgrade it to version 1.2.0 in your local install.
+- If you have any further errors (or problem solutions), please write issues or edit this file directly.
