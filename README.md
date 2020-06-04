@@ -57,7 +57,7 @@ If you want to send manual bytes over the serial connection for testing, you can
 Flash the [**test sketch**](code/test.arduino) on the teensy to test the connection. All incomming data from bluetooth will be displayed on the serial monitor.
 
 ## Troubleshooting
-
+- In TAMS, pair the bluetooth first (password: 1234), then use `sudo rfcomm bind /dev/rfcomm1 98:D3:31:50:16:50` and `sudo rfcomm bind /dev/rfcomm2 98:D3:31:60:18:35`
 - First make sure that the Bluetooth adapter of the computer is as near as possible to the robotic arm and that it is not obstructed by anything.
 - If the bluetooth connection stops to work, try **rfcomm release all** and rebinding of the devices.
 - If you update your system to ubuntu 18.04, the default version of pymodbus install from `apt-get` does not work, use `pip install pymodbus==1.2.0` to downgrade it to version 1.2.0 in your local install.
