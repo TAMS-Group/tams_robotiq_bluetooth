@@ -58,7 +58,13 @@ Flash the [**test sketch**](code/test.arduino) on the teensy to test the connect
 
 ## Troubleshooting
 - In TAMS, pair the bluetooth first (password: 1234), then use `sudo rfcomm bind /dev/rfcomm1 98:D3:31:50:16:50` and `sudo rfcomm bind /dev/rfcomm2 98:D3:31:60:18:35`
-- First make sure that the Bluetooth adapter of the computer is as near as possible to the robotic arm and that it is not obstructed by anything.
+- To run these two commands while start up, copy the following codes into `/etc/rc.local`.
+```
+sudo rfcomm bind /dev/rfcomm1 98:D3:31:50:16:50
+sudo rfcomm bind /dev/rfcomm2 98:D3:31:60:18:35
+exit 0
+```
+- If you still have error, make sure that the Bluetooth adapter of the computer is as near as possible to the robotic arm and that it is not obstructed by anything.
 - If the bluetooth connection stops to work, try **rfcomm release all** and rebinding of the devices.
-- If you update your system to ubuntu 18.04, the default version of pymodbus install from `apt-get` does not work, use `pip install pymodbus==1.2.0` to downgrade it to version 1.2.0 in your local install.
+- If you update your system to `ubuntu 18.04`, the default version of pymodbus install from `apt-get` does not work, use `pip install pymodbus==1.2.0` to downgrade it to version 1.2.0 in your local install.
 - If you have any further errors (or problem solutions), please write issues or edit this file directly.
