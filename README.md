@@ -57,6 +57,7 @@ If you want to send manual bytes over the serial connection for testing, you can
 Flash the [**test sketch**](code/test.arduino) on the teensy to test the connection. All incomming data from bluetooth will be displayed on the serial monitor.
 
 ## Troubleshooting
+- Make sure that your user has the correct rights, i.e. beeing in group dialout
 - In TAMS, pair the bluetooth first (password: 1234), then use `sudo rfcomm bind /dev/rfcomm1 98:D3:31:50:16:50` and `sudo rfcomm bind /dev/rfcomm2 98:D3:31:60:18:35`
 - To run these two commands while start up, copy the following codes into `/etc/rc.local`.
 ```
