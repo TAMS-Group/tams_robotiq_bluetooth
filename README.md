@@ -55,7 +55,25 @@ Do the same for the second HC-05 to /dev/rfcomm2 and remember which rfcomm is co
 Should you ever run into problems, use **rfcomm release all** to remove all seriel connections and then bind them again. You can see the current status using **rfcomm -a**.
 If you want to send manual bytes over the serial connection for testing, you can use **minicom**.
 Flash the [**test sketch**](code/test.arduino) on the teensy to test the connection. All incomming data from bluetooth will be displayed on the serial monitor.
+ 
+## Installation of the FT sensor, Bluetooth adapter, and the Robotiaue Gripper
+  
+1. connect FT sensor to the square FT adapter, which is mounted to the UR5 end-effector link
+   - tighten 4 screws on the outer ring of the FT sensor with Metric screwdriver
+   - the top cylinder on the UR5 wrist 3 should align with the top cylinder on the FT sensor
 
+2. connect the Bluetooth device with the FT sensor
+   - connect the black-red cable of the device to the exposed black-red cable from the UR5 end-effector
+   - put the top part of the device align with the top cylinder of the FT sensor, see [figure](docs/installed_device.png)
+   - tighten the 6 screws on the device with Metric screwdriver
+
+3. connect the gripper with the Bluetooth device
+   - put the gripper in the correct position (the COM and PWR port side should be at the left side wrt the top side of the FT sensor)
+   - tighten the 6 screws, whose holes are on the curved surface of the device, by Imperial screwdriver (the yellow set, 7/64 size)
+
+4. connect two cables coming from the Bluetooth device to the FT sensor and the gripper
+   - the longer cable goes to the FT sensor, the shorter one goes to the PWR  port of the gripper
+  
 ## Troubleshooting
 - Make sure that your user has the correct rights, i.e. beeing in group dialout
 - In TAMS, pair the bluetooth first (password: 1234), then use `sudo rfcomm bind /dev/rfcomm1 98:D3:31:50:16:50` and `sudo rfcomm bind /dev/rfcomm2 98:D3:31:60:18:35`
