@@ -56,7 +56,7 @@ Should you ever run into problems, use **rfcomm release all** to remove all seri
 If you want to send manual bytes over the serial connection for testing, you can use **minicom**.
 Flash the [**test sketch**](code/test.arduino) on the teensy to test the connection. All incomming data from bluetooth will be displayed on the serial monitor.
  
-## Installation of the FT sensor, Bluetooth adapter, and the Robotiaue Gripper
+## Installation of the FT sensor, Bluetooth adapter, and the Robotiq Gripper
   
 1. connect FT sensor to the square FT adapter, which is mounted to the UR5 end-effector link
    - tighten 4 screws on the outer ring of the FT sensor with Metric screwdriver
