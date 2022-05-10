@@ -86,4 +86,5 @@ exit 0
 - If you still have error, make sure that the Bluetooth adapter of the computer is as near as possible to the robotic arm and that it is not obstructed by anything.
 - If the bluetooth connection stops to work, try **rfcomm release all** and rebinding of the devices.
 - If you update your system to `ubuntu 18.04`, the default version of pymodbus install from `apt-get` does not work, use `pip install pymodbus==1.2.0` to downgrade it to version 1.2.0 in your local install.
+ - However, in Ubuntu 20.04, we need to use python3, and in python3 we cannot use pymodbus 1.2.0 as pymodbus was modified to fit python3 after version 1.3.0, so we grab the code of pymodbus 1.2.0 to our robotiq package, and make it work in python3. Now just install pymodbus via `sudo apt install python3-pymodbus` is fine.
 - If you have any further errors (or problem solutions), please write issues or edit this file directly.
