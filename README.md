@@ -21,8 +21,6 @@ Power is provided by the UR5 as 48V. A converter is needed since the gripper and
 In order to save space, the two teensy and the RS-485 converters are soldered together as a pair. The HC-05 are not soldered together to prevent interferance. 
 **Make sure that you programmed the HC-05 using the AT commands before you solder them (see next section).**
 
-![solderd boards](docs/soldered.png)
-
 ## Programming the HC-05
 
 The HC-05 is programmed using AT commands. To be able to use them, we have to enter the AT mode. Do this by holding the button during power up. The LED should blink slowly afterwards. Now connect the HC-05 to a teensy and use the [**code**](code/at.arduino) to be able to send the AT commands. 
